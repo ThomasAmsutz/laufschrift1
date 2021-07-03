@@ -1,15 +1,18 @@
-music.startMelody(music.builtInMelody(Melodies.Birthday), MelodyOptions.Once)
-basic.showString("Lieber Elias, alles Gute zum 6. Geburtstag")
-basic.forever(function () {
-    if (input.logoIsPressed()) {
-        basic.showIcon(IconNames.Heart)
-    } else if (input.logoIsPressed()) {
-        basic.showIcon(IconNames.Ghost)
-    } else if (input.buttonIsPressed(Button.A)) {
-        basic.showIcon(IconNames.EigthNote)
-    } else if (input.buttonIsPressed(Button.B)) {
-        basic.showIcon(IconNames.Snake)
-    } else {
-        basic.clearScreen()
-    }
+input.onButtonPressed(Button.A, function () {
+    basic.clearScreen()
+    zahl += 69
+    basic.showNumber(zahl)
 })
+input.onButtonPressed(Button.AB, function () {
+    basic.clearScreen()
+    zahl = 0
+    basic.showNumber(zahl)
+})
+input.onButtonPressed(Button.B, function () {
+    basic.clearScreen()
+    zahl += -69
+    basic.showNumber(zahl)
+})
+let zahl = 0
+zahl = 0
+basic.showNumber(zahl)
