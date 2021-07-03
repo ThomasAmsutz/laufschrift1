@@ -1,18 +1,20 @@
 input.onButtonPressed(Button.A, function () {
     basic.clearScreen()
-    zahl += 69
-    basic.showNumber(zahl)
+    zahl += 775
+    led.stopAnimation()
 })
 input.onButtonPressed(Button.AB, function () {
     basic.clearScreen()
     zahl = 0
-    basic.showNumber(zahl)
+    led.stopAnimation()
 })
 input.onButtonPressed(Button.B, function () {
     basic.clearScreen()
-    zahl += -69
-    basic.showNumber(zahl)
+    zahl += 1550
+    led.stopAnimation()
 })
 let zahl = 0
 zahl = 0
-basic.showNumber(zahl)
+basic.forever(function () {
+    basic.showNumber(zahl)
+})
